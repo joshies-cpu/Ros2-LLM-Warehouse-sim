@@ -12,6 +12,9 @@ setup(
         ('share/' + package_name, ['package.xml']),
     ],
     install_requires=['setuptools'],
+    package_data={
+        package_name: ['prompt_template.txt'],
+    },
     zip_safe=True,
     maintainer='joshin',
     maintainer_email='joshincherian5@gmail.com',
@@ -23,7 +26,8 @@ setup(
         ],
     },
     entry_points={
-        'console_scripts': [
-        ],
-    },
+    "console_scripts": [
+        "planner_node = mission_planner.planner_node:main",
+    ],
+},
 )

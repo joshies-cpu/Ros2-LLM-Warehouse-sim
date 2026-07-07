@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from .config import (
-    AVAILABLE_MISSIONS,
+    SUPPORTED_MISSION_TYPES,
     AVAILABLE_ROUTES,
     MAX_SPEED,
     DEFAULT_SPEED,
@@ -18,11 +18,12 @@ class PromptBuilder:
         self.prompt_text = self.prompt_template.read_text()
 
     def build_prompt(self, user_prompt: str) -> str:
-        return self.prompt_text.format(
-            missions="\n".join(f"- {m}" for m in AVAILABLE_MISSIONS),
-            routes="\n".join(f"- {r}" for r in AVAILABLE_ROUTES),
-            max_speed=MAX_SPEED,
-            default_speed=DEFAULT_SPEED,
-            user_prompt=user_prompt,
-        )
+        prompt = self.prompt_text
+        prompt = prompt.replace("{missions}", "\n".join(f"- {m}" for m in SUPPORTED_MISSION_TYPES))
+        prompt = prompt.replace("{routes}", "\n".join(f"- {r}" for r in AVAILABLE_ROUTES))
+        prompt = prompt.replace("{max_speed}", str(MAX_SPEED))
+        prompt = prompt.replace("{default_speed}", str(DEFAULT_SPEED))
+        prompt = prompt.replace("{user_prompt}", user_prompt)
+        return prompt
+
     
