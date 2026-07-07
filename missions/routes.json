@@ -1,0 +1,102 @@
+{
+    "inspection_loop": {
+        "description": "Indoor inspection route around the facility.",
+        "type": "loop",
+        "default_speed": 0.3,
+        "waypoints": [
+            {
+                "x": 0.0,
+                "y": 0.0,
+                "yaw": 0.0,
+                "frame_id": "map"
+            },
+            {
+                "x": 2.0,
+                "y": 0.0,
+                "yaw": 0.0,
+                "frame_id": "map"
+            },
+            {
+                "x": 2.0,
+                "y": 2.0,
+                "yaw": 1.57,
+                "frame_id": "map"
+            },
+            {
+                "x": 0.0,
+                "y": 2.0,
+                "yaw": 3.14,
+                "frame_id": "map"
+            }
+        ]
+    },
+    "warehouse_loop": {
+        "description": "Patrol route covering the warehouse aisles.",
+        "type": "loop",
+        "default_speed": 0.25,
+        "waypoints": [
+            {
+                "x": 1.0,
+                "y": 1.0,
+                "yaw": 0.0,
+                "frame_id": "map"
+            },
+            {
+                "x": 4.0,
+                "y": 1.0,
+                "yaw": 0.0,
+                "frame_id": "map"
+            },
+            {
+                "x": 4.0,
+                "y": 4.0,
+                "yaw": 1.57,
+                "frame_id": "map"
+            },
+            {
+                "x": 1.0,
+                "y": 4.0,
+                "yaw": 3.14,
+                "frame_id": "map"
+            }
+        ]
+    },
+    "charging_station": {
+        "description": "Robot charging station.",
+        "type": "destination",
+        "default_speed": 0.2,
+        "waypoints": [
+            {
+                "x": 5.0,
+                "y": 0.0,
+                "yaw": 1.57,
+                "frame_id": "map"
+            }
+        ]
+    },
+    "loading_dock": {
+        "description": "Loading dock inspection route.",
+        "type": "destination",
+        "default_speed": 0.2,
+        "waypoints": [
+            {
+                "x": 6.0,
+                "y": 2.0,
+                "yaw": 0.0,
+                "frame_id": "map"
+            },
+            {
+                "x": 8.0,
+                "y": 2.0,
+                "yaw": 0.0,
+                "frame_id": "map"
+            },
+            {
+                "x": 8.0,
+                "y": 5.0,
+                "yaw": 1.57,
+                "frame_id": "map"
+            }
+        ]
+    }
+}

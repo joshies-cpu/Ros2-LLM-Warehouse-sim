@@ -1,0 +1,28 @@
+teleop_twist_joy_node:
+  ros__parameters:
+    # Left stick vertical = forward/back (axis 1)
+    axis_linear:
+      x: 1
+    scale_linear:
+      x: 0.5
+    scale_linear_turbo:
+      x: 1.0
+
+    # Left stick horizontal = turning (axis 0)
+    axis_angular:
+      yaw: 0
+    scale_angular:
+      yaw: 1.0
+
+    # No deadman button required - left stick moves freely
+    enable_button: 0
+    require_enable_button: false
+
+    # Button 0 (A/Cross) = turbo mode
+    enable_turbo_button: 0
+
+joy_node:
+  ros__parameters:
+    device_id: 0
+    deadzone: 0.05
+    autorepeat_rate: 20.0

@@ -1,0 +1,21 @@
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Python cache files
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# System and editor files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# Local user configurations or logs
+*.log
