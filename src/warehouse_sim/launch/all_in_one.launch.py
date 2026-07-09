@@ -26,14 +26,13 @@ def generate_launch_description():
         output='screen'
     )
     
-    # ── Mission Planner Node (runs in a separate terminal window) ─────────────
+    # ── Mission Planner Node ──────────────────────────────────────────────────
     planner_node = Node(
         package='mission_planner',
         executable='planner_node',
         name='mission_planner',
         parameters=[{'use_sim_time': True}],
-        output='screen',
-        prefix='gnome-terminal --'
+        output='screen'
     )
     
     return LaunchDescription([
