@@ -20,10 +20,12 @@ install(
 )
 
 # Install model files
-install(
-  DIRECTORY models/
-  DESTINATION share/${PROJECT_NAME}/models
-)
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/models")
+  install(
+    DIRECTORY models/
+    DESTINATION share/${PROJECT_NAME}/models
+  )
+endif()
 
 # Install map files
 install(
