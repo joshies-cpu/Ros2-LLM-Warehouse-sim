@@ -178,5 +178,8 @@ if __name__ == "__main__":
     ros_thread = threading.Thread(target=ros2_thread_function, daemon=True)
     ros_thread.start()
     
+    # Clear sys.argv to prevent Flask's CLI parser from processing ROS2 launch arguments
+    sys.argv = [sys.argv[0]]
+    
     # Run Flask application
     app.run(host="0.0.0.0", port=5000, debug=False)
