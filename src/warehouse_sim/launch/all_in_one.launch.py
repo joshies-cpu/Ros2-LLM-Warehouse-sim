@@ -3,12 +3,15 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, ExecuteProcess
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
 def generate_launch_description():
     warehouse_sim_dir = get_package_share_directory('warehouse_sim')
+    
+    # Resolve the workspace root directory dynamically for portability
+    workspace_root = os.path.abspath(os.path.join(warehouse_sim_dir, '..', '..', '..'))
     
     # ── Simulation Launch ─────────────────────────────────────────────────────
     simulation_cmd = IncludeLaunchDescription(
@@ -35,8 +38,16 @@ def generate_launch_description():
         output='screen'
     )
     
+    # ── Flask Web Interface ───────────────────────────────────────────────────
+    flask_node = ExecuteProcess(
+        cmd=['python3', 'web_interface/app.py'],
+        cwd=workspace_root,
+        output='screen'
+    )
+    
     return LaunchDescription([
         simulation_cmd,
         executor_node,
-        planner_node
+        planner_node,
+        flask_node
     ])
