@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warehouse Robot Operator Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <div class="dashboard-container">
         <!-- Header -->
         <header class="header">
             <div class="logo-area">
                 <div class="logo-icon"></div>
-                <h1>ROBOTICS COMMAND CENTER</h1>
+                <h1>OMOKAI TASK PANEL </h1>
             </div>
             <div class="time-stamp" id="live-clock">00:00:00</div>
         </header>
@@ -44,7 +48,7 @@
                         </div>
                         <div class="status-item" id="status-active">
                             <span class="indicator red"></span>
-                            <span class="label">Mission Active</span>
+                            <span class="label">Mission Status</span>
                         </div>
                     </div>
                 </div>
@@ -56,7 +60,9 @@
                     </div>
                     <div class="form-group">
                         <label for="prompt-input">Natural Language Command</label>
-                        <textarea id="prompt-input" placeholder="Type a command for the robot... (e.g., 'go to shelf A then loading dock')" rows="4"></textarea>
+                        <textarea id="prompt-input"
+                            placeholder="Type a command for the robot... (e.g., 'go to shelf A then loading dock')"
+                            rows="4"></textarea>
                     </div>
                     <button id="btn-execute" class="btn btn-primary">
                         <span>Execute Mission</span>
@@ -92,4 +98,5 @@
 
     <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
+
 </html>
