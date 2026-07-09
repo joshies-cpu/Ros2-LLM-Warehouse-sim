@@ -1,8 +1,12 @@
 # ROS 2 LLM-Powered Warehouse Robot Simulation
 
+![Operator Dashboard](docs/images/hero.png)
+
 A ROS 2-based warehouse simulation featuring a TurtleBot3 robot, autonomous navigation via Nav2 (AMCL localization), and natural language mission planning powered by a local Ollama instance running Qwen2.5.
 
 ## System Architecture
+
+![Gazebo Simulation & RViz Navigation](docs/images/gazebo.png)
 
 ```
                                   [ Flask Web Interface ]
@@ -21,7 +25,7 @@ A ROS 2-based warehouse simulation featuring a TurtleBot3 robot, autonomous navi
                                     [ Nav2 Navigation ]
                                              │
                                              ▼ Cmd Vel
-                                 [ Gazebo TurtleBot3 ]
+                                  [ Gazebo TurtleBot3 ]
 ```
 
 ---
@@ -43,7 +47,7 @@ A ROS 2-based warehouse simulation featuring a TurtleBot3 robot, autonomous navi
      ```
 4. **Python dependencies** installed:
    ```bash
-   pip install -r web_interface/requirements.txt
+   pip install -r requirements.txt
    ```
 
 ---
