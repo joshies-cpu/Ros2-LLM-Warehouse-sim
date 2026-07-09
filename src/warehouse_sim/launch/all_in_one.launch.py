@@ -11,7 +11,7 @@ def generate_launch_description():
     warehouse_sim_dir = get_package_share_directory('warehouse_sim')
     
     # Resolve the workspace root directory dynamically for portability
-    workspace_root = os.path.abspath(os.path.join(warehouse_sim_dir, '..', '..', '..'))
+    workspace_root = os.path.abspath(os.path.join(warehouse_sim_dir, '..', '..', '..', '..'))
     
     # ── Simulation Launch ─────────────────────────────────────────────────────
     simulation_cmd = IncludeLaunchDescription(
