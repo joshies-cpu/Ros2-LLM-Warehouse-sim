@@ -40,7 +40,7 @@ def generate_launch_description():
     
     # ── Flask Web Interface ───────────────────────────────────────────────────
     flask_node = ExecuteProcess(
-        cmd=['python3', 'web_interface/app.py'],
+        cmd=['python3', '-u', 'web_interface/app.py'],
         cwd=workspace_root,
         output='screen'
     )
