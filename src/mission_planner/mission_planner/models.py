@@ -4,9 +4,7 @@ from typing import Dict, Any
 
 @dataclass
 class Mission:
-    """
-    Represents a robot mission.
-    """
+    """Represents a robot mission."""
 
     mission_type: str
     parameters: Dict[str, Any]

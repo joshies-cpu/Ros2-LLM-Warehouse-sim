@@ -34,9 +34,9 @@ SUPPORTED_MISSION_TYPES = [
 
 AVAILABLE_ROUTES = {
     "inspection_loop": "Indoor inspection route around the facility.",
-    "warehouse_loop": "Patrol route covering the warehouse aisles.",
     "charging_station": "Robot charging location.",
     "loading_dock": "Inspection route around the loading dock.",
+    "shelf_a": "shelf A",
 }
 
 

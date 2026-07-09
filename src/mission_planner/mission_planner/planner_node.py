@@ -2,6 +2,7 @@
 
 import rclpy
 from rclpy.node import Node
+from std_msgs.msg import String
 
 from .prompt_builder import PromptBuilder
 from .llm_client import LLMClient
@@ -9,8 +10,9 @@ from .llm_client import LLMClient
 
 class MissionPlanner(Node):
     """
-    ROS2 node responsible for converting a natural language
-    command into structured mission JSON using an LLM.
+    ROS2 node for mission planning.
+
+    Converts a natural language command into structured mission JSON using an LLM.
     """
 
     def __init__(self):
@@ -18,6 +20,11 @@ class MissionPlanner(Node):
 
         self.prompt_builder = PromptBuilder()
         self.llm = LLMClient()
+        self.mission_pub = self.create_publisher(
+            String,
+            "/mission_request",
+            10,
+        )
 
         self.get_logger().info("Mission Planner Ready")
 
@@ -37,6 +44,11 @@ class MissionPlanner(Node):
                 self.get_logger().info("Sending prompt to LLM...")
 
                 response = self.llm.generate(prompt)
+
+                msg = String()
+                msg.data = response
+                self.mission_pub.publish(msg)
+                self.get_logger().info("Mission published to /mission_request")
 
                 print("\n========== Mission JSON ==========\n")
                 print(response)

@@ -11,52 +11,27 @@
                 "frame_id": "map"
             },
             {
-                "x": 2.0,
-                "y": 0.0,
-                "yaw": 0.0,
+                "x": 6.863,
+                "y": 2.283,
+                "yaw": -2.14028,
                 "frame_id": "map"
             },
             {
-                "x": 2.0,
-                "y": 2.0,
-                "yaw": 1.57,
+                "x": -1.460,
+                "y": -6.795,
+                "yaw": 1.455,
+                "frame_id": "map"
+            },
+            {
+                "x": 3.247,
+                "y": -6.557,
+                "yaw": 0.056,
                 "frame_id": "map"
             },
             {
                 "x": 0.0,
-                "y": 2.0,
-                "yaw": 3.14,
-                "frame_id": "map"
-            }
-        ]
-    },
-    "warehouse_loop": {
-        "description": "Patrol route covering the warehouse aisles.",
-        "type": "loop",
-        "default_speed": 0.25,
-        "waypoints": [
-            {
-                "x": 1.0,
-                "y": 1.0,
+                "y": 0.0,
                 "yaw": 0.0,
-                "frame_id": "map"
-            },
-            {
-                "x": 4.0,
-                "y": 1.0,
-                "yaw": 0.0,
-                "frame_id": "map"
-            },
-            {
-                "x": 4.0,
-                "y": 4.0,
-                "yaw": 1.57,
-                "frame_id": "map"
-            },
-            {
-                "x": 1.0,
-                "y": 4.0,
-                "yaw": 3.14,
                 "frame_id": "map"
             }
         ]
@@ -67,9 +42,9 @@
         "default_speed": 0.2,
         "waypoints": [
             {
-                "x": 5.0,
-                "y": 0.0,
-                "yaw": 1.57,
+                "x": 6.863,
+                "y": 2.283,
+                "yaw": -2.14028,
                 "frame_id": "map"
             }
         ]
@@ -80,21 +55,22 @@
         "default_speed": 0.2,
         "waypoints": [
             {
-                "x": 6.0,
-                "y": 2.0,
-                "yaw": 0.0,
+                "x": 3.247,
+                "y": -6.557,
+                "yaw": 0.056,
                 "frame_id": "map"
-            },
+            }
+        ]
+    },
+    "shelf_a": {
+        "description": "shelf A",
+        "type": "destination",
+        "default_speed": 0.2,
+        "waypoints": [
             {
-                "x": 8.0,
-                "y": 2.0,
-                "yaw": 0.0,
-                "frame_id": "map"
-            },
-            {
-                "x": 8.0,
-                "y": 5.0,
-                "yaw": 1.57,
+                "x": -1.460,
+                "y": -6.795,
+                "yaw": 1.455,
                 "frame_id": "map"
             }
         ]
